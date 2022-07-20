@@ -1,0 +1,133 @@
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+h1,
+h2,
+h5 {
+    color: rgb(86 84 84);
+    font-weight: 600;
+}
+
+.info {
+    color: rgb(212, 212, 212);
+    max-width: 640px;
+    margin: auto;
+}
+
+header {
+    margin: 0 !important;
+    background-image: url('/images/bg-header-desktop.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background-color: rgb(235 234 237);
+}
+
+.fa-copyright {
+    color: hsl(171, 66%, 44%);
+}
+
+.logo .fa-copyright {
+    font-size: 120px;
+}
+
+.mini-logo .fa-copyright {
+    font-size: 80px;
+}
+
+.download button {
+    max-width: 200px;
+}
+
+.btn {
+    color: white;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.bg-primary2 {
+    background-color: hsl(233, 100%, 69%) !important;
+    box-shadow: 0 1px 0 1px hsl(214deg 100% 36%) !important
+}
+
+.bg-primary2:hover {
+    background-color: hsla(233, 100%, 69%, 0.771) !important;
+}
+
+.bg-success2 {
+    background-color: hsl(171, 66%, 44%) !important;
+    box-shadow: 0 1px 0 1px hsl(171, 65%, 29%) !important;
+}
+
+.bg-success2:hover {
+    background-color: hsla(171, 66%, 44%, 0.777) !important;
+}
+
+.left {
+    padding-right: 0;
+}
+
+img {
+    width: inherit;
+}
+
+.left img {
+    position: relative;
+    left: -35px;
+}
+
+.right {
+    max-width: 335px;
+}
+
+.block-img {
+    max-width: 700px;
+    margin: auto;
+}
+
+.block-img img {
+    width: 100%;
+}
+
+.icon {
+    width: 40px;
+}
+
+.company img {
+    width: 100%;
+}
+
+.social img {
+    width: 25px;
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-xl {
+        padding: 0 15px;
+    }
+    .left img {
+        left: 0px;
+    }
+    .left {
+        max-width: 500px;
+        padding: 0 50px;
+    }
+    .row1 {
+        justify-content: center;
+        text-align: center;
+    }
+    .company {
+        max-width: 200px;
+        margin: auto;
+    }
+    .social img {
+        margin-right: 15px;
+    }
+}
