@@ -1,133 +1,375 @@
 body {
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 h1,
 h2,
-h5 {
-    color: rgb(86 84 84);
-    font-weight: 600;
+h6 {
+    font-weight: 700;
 }
 
-.info {
-    color: rgb(212, 212, 212);
-    max-width: 640px;
-    margin: auto;
+h6 {
+    font-size: 16px;
 }
 
-header {
-    margin: 0 !important;
-    background-image: url('./images/bg-header-desktop.png');
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
+.nav-item {
+    margin-right: 10px;
 }
 
-footer {
-    background-color: rgb(235 234 237);
+.btn-secondary {
+    background-color: hsl(26, 100%, 55%);
+    font-weight: bold;
 }
 
-.fa-copyright {
-    color: hsl(171, 66%, 44%);
+.btn-secondary:focus {
+    background-color: hsl(26, 100%, 55%);
 }
 
-.logo .fa-copyright {
-    font-size: 120px;
+.btn-secondary:hover {
+    background-color: hsl(26, 100%, 72%);
 }
 
-.mini-logo .fa-copyright {
-    font-size: 80px;
+nav {
+    border-bottom: 2px solid hsl(230, 60%, 97%)
 }
 
-.download button {
-    max-width: 200px;
+.nav-right {
+    margin: 0;
+    display: flex;
+    list-style: none;
 }
 
-.btn {
-    color: white;
+.cart-card {
+    position: absolute;
+    width: 350px;
+    right: -7px;
+    top: 71px;
+    z-index: 2;
+    display: none;
 }
 
-.btn:hover {
-    color: white;
+.card-header {
+    background-color: white;
+    background-color: transparent;
 }
 
-.bg-primary2 {
-    background-color: hsl(233, 100%, 69%) !important;
-    box-shadow: 0 1px 0 1px hsl(214deg 100% 36%) !important
+.card-body img {
+    width: 55px;
+    height: 55px;
 }
 
-.bg-primary2:hover {
-    background-color: hsla(233, 100%, 69%, 0.771) !important;
+.card-body i {
+    cursor: pointer;
+    color: rgba(128, 128, 128, 0.674);
 }
 
-.bg-success2 {
-    background-color: hsl(171, 66%, 44%) !important;
-    box-shadow: 0 1px 0 1px hsl(171, 65%, 29%) !important;
+.card-body i:hover {
+    color: red;
 }
 
-.bg-success2:hover {
-    background-color: hsla(171, 66%, 44%, 0.777) !important;
+.card-body .name {
+    margin-bottom: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.left {
-    padding-right: 0;
+.avatar {
+    width: 45px;
+    padding: 0;
+    border-radius: 25px;
 }
 
-img {
-    width: inherit;
+.ring {
+    width: 48px;
+    cursor: pointer;
 }
 
-.left img {
+.ring::before {
+    display: block;
+    height: 48px;
+    content: '';
+    border: solid 3px hsl(26, 100%, 55%);
+    border-radius: 200px;
+    width: 48px;
+    margin-bottom: -47px;
+    margin-left: -1px;
+    transform: scale(0);
+    transition: transform 250ms ease-out;
+}
+
+.ring:hover:before {
+    transform: scale(1);
+}
+
+.line {
+    padding: 30px 0 0;
+}
+
+.line::after {
+    margin-top: 28px;
+    display: block;
+    content: '';
+    border-bottom: solid 3px hsl(26, 100%, 55%);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.line:hover:after {
+    transform: scaleX(1);
+}
+
+.fa-shopping-cart {
+    font-size: 19px;
+}
+
+.badge-light {
     position: relative;
+    font-size: 9px;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 10px;
+    top: -10px;
+    right: 30px;
+    background-color: hsl(26, 100%, 55%);
+}
+
+.navbar-toggler {
+    border-color: transparent !important;
+}
+
+.rounded-sm {
+    border-radius: 15px !important;
+}
+
+.big-img1,
+.big-img2 {
+    width: 100%;
+}
+
+.small-img {
+    width: 85px;
+    cursor: pointer;
+}
+
+.small-img-container {
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 20px;
+    height: fit-content;
+    transition: all 0.2s;
+}
+
+.small-img:hover {
+    opacity: 0.5;
+}
+
+.small-img-active {
+    border: 3px solid hsl(26, 100%, 55%);
+}
+
+.small-img-active .small-img {
+    opacity: 0.3;
+}
+
+h6 {
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+}
+
+.right p {
+    color: rgba(68, 68, 68, 0.74);
+}
+
+.percentage {
+    position: relative;
+    font-size: 50%;
+    top: -5px;
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%)
+}
+
+.price h5 {
+    text-decoration: line-through;
+    color: rgba(112, 112, 112, 0.74);
+}
+
+.nice-number {
+    display: inline-flex;
+    justify-content: stretch;
+    margin-top: 30px;
+}
+
+.nice-number input {
+    vertical-align: middle;
+    -moz-appearance: textfield;
+    box-sizing: content-box;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    width: 90px;
+    height: 48px;
+}
+
+.nice-number input::-webkit-inner-spin-button,
+.nice-number input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.nice-number button {
+    height: 50px;
+    color: hsl(26, 100%, 55%);
+    font-weight: 600;
+    font-size: 30px;
+    padding: 2px 5px;
+}
+
+.nice-number button:hover,
+.nice-number button:focus {
+    color: hsl(26, 100%, 55%);
+    background-color: rgba(232, 232, 250, 0.475) !important;
+}
+
+.bg-secondary {
+    border-radius: 0;
+    background-color: hsl(223, 64%, 98%) !important;
+}
+
+.right .fa-shopping-cart {
+    color: white;
+    margin-left: 0;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 1;
+}
+
+.carousel-control-prev img,
+.carousel-control-next img {
+    background-color: white;
+    padding: 15px 18px;
+    border-radius: 25px;
+}
+
+.modal-content {
+    border: none;
+    background-color: transparent;
+}
+
+.fade {
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.nxt {
+    right: -35px;
+}
+
+.prev {
     left: -35px;
 }
 
-.right {
-    max-width: 335px;
+.close-btn2 {
+    top: 46px;
+    right: -220px;
+    position: relative;
+    width: 27px;
+    float: right;
+    color: white;
+    font-size: 25px;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
-.block-img {
-    max-width: 700px;
-    margin: auto;
+.close-btn2:hover {
+    color: hsl(26, 100%, 55%) !important;
 }
 
-.block-img img {
-    width: 100%;
+.pointer {
+    cursor: pointer;
 }
 
-.icon {
-    width: 40px;
+.d-none2 {
+    display: none !important;
 }
 
-.company img {
-    width: 100%;
-}
-
-.social img {
-    width: 25px;
-    margin-right: 5px;
-}
-
-@media only screen and (max-width: 768px) {
-    .container-xl {
-        padding: 0 15px;
+@media only screen and (max-width: 992px) {
+    nav {
+        border-bottom: none;
+        margin-top: 10px;
     }
-    .left img {
-        left: 0px;
+    .logo {
+        vertical-align: unset;
     }
+    .line {
+        color: black !important;
+        padding-top: 10px;
+    }
+    .line::after {
+        margin-top: 0px;
+    }
+    .nav-right {
+        margin-top: 0;
+        padding-left: 10px;
+    }
+    .nav-right .nav-item {
+        margin: 0 !important;
+    }
+    .logo {
+        margin-left: 5px !important;
+        margin-right: 0 !important;
+    }
+    .navbar-collapse {
+        height: 100vh;
+        width: 300px;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: -315px;
+        transition: all 0.2s !important;
+        padding-left: 25px;
+        z-index: 1000;
+        box-shadow: 10px 0px 10px #aaaaaa;
+    }
+    .nice-number input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
     .left {
-        max-width: 500px;
-        padding: 0 50px;
+        padding: 0 !important;
     }
-    .row1 {
-        justify-content: center;
-        text-align: center;
+    .cart-card {
+        width: 95%;
+        left: 2.5%;
+        right: 0;
+        top: 75px;
     }
-    .company {
-        max-width: 200px;
-        margin: auto;
+}
+
+@media only screen and (max-width: 390px) {
+    nav {
+        width: 100% !important;
     }
-    .social img {
-        margin-right: 15px;
+    .logo {
+        width: 85px;
+    }
+    .fa-shopping-cart {
+        padding-left: 0;
+        padding-right: 0
+    }
+    body {
+        padding: 0 !important;
+    }
+    .navbar-collapse {
+        width: 150px;
+    }
+    .card-body .name {
+        width: 157px;
     }
 }
